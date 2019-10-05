@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Diet Application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+<body>
+
+<div class="container">
+    <!--<div id="menubox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">-->
+    <tr th:each="cal: ${calAll}">
+            <td th:text="${cal.getCal()}" />
+            <td th:text="${cal.getStart()}" />
+    </tr>
+
+
+    <div class="col-sm-12 controls">
+        <a post_id="btn-login" href="/addPersonalData" class="btn btn-success">uzupelnij dane</a>
+        <a post_id="btn-login2" href="/addCal" class="btn btn-success">dodaj kolejny dzien</a>
+        <a post_id="btn-login3" href="/showCal" class="btn btn-success">wyswietl kalorie</a>
+
+    </div>
+</div>
+</body>
+</html>

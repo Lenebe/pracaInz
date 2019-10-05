@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Diet Application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+<body>
+
+<div class="container">
+    <!--<div id="menubox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">-->
+    <div id="menubox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">Dodaj kolejny dzien</div>
+            </div>
+
+            <!--<div style="padding-top:30px" class="panel-body">-->
+            <div class="panel-body">
+                <div class="panel-primary">
+
+                    <form action="#" th:action="@{/addCal}" th:object="${cal}" method="post">
+                        <p><input type="date" th:field="*{start}"/></p>
+
+
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            kalorie: <input type="text" class="form-control" name="gender" placeholder=444
+                                         th:field="*{cal}">
+                        </div>
+
+                        <input type="submit" value="Submit"/>
+                    </form>
+                </div>
+
+
+            <!--<div style="padding-top:30px" class="panel-footer">-->
+            <div>
+                <!--<div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>-->
+                <form id="loginform" class="form-horizontal" role="form">
+                    <div class="col-sm-12 controls">
+                        <a post_id="btn-dark" href="/addPersonalData" class="btn btn-success">uzupelnij dane</a>
+                        <a post_id="btn-login2" href="/addCal" class="btn btn-success">dodaj kolejny dzien</a>
+                        <a post_id="btn-login3" href="/showCal" class="btn btn-success">wyswietl kalorie</a>
+                    </div>
+                </form>
+                <!--</div>-->
+            </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
